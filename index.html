@@ -8,7 +8,12 @@
         /* 基本 CSS 樣式 */
         body {
             font-family: '微軟正黑體', Arial, sans-serif;
-            background-color: #f4f4f9;
+            /* --- 背景圖片設定 --- */
+            background-image: url('BG.png'); /* 指定背景圖片路徑 */
+            background-size: cover;          /* 確保圖片覆蓋整個視窗 */
+            background-attachment: fixed;    /* 讓圖片固定不動，捲動時內容在圖片上滑動 */
+            background-color: #f4f4f9;       /* 作為圖片載入前的備用背景色 */
+            /* -------------------- */
             color: #333;
             line-height: 1.6;
             margin: 0;
@@ -18,7 +23,8 @@
         .container {
             max-width: 700px;
             margin: 0 auto;
-            background: #fff;
+            /* 👇 修改點：使用 rgba(255, 255, 255, 0.8) 讓背景色為 80% 不透明的白色 */
+            background: rgba(255, 255, 255, 0.8);
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
